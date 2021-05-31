@@ -33,6 +33,8 @@ function App() {
       setLibraryStatus={setLibraryStatus}/>
       <Song currentSong={currentSong} />
       <Player 
+        setCurrentSong={setCurrentSong}
+        songs={songs}
         songInfo={songInfo}
         setSongInfo={setSongInfo}
         audioReference={audioReference}
