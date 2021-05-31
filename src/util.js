@@ -9,7 +9,7 @@ const chillHop = () => {
             color: ['#345561, #2F3C5E'],
             audio: "https://mp3.chillhop.com/serve.php/?mp3=10310",
             id: uuidv4(),
-            active: false
+            active: true
         },
         {
             name: "Blur",

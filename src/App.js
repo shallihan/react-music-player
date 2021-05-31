@@ -38,7 +38,8 @@ function App() {
         audioReference={audioReference} 
         songs={songs} 
         setCurrentSong={setCurrentSong}
-        isPlaying={isPlaying}/>
+        isPlaying={isPlaying}
+        setSongs={setSongs}/>
       <audio 
         onTimeUpdate={timeUpdateHandler} 
         ref={audioReference} 
