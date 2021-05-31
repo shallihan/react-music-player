@@ -35,6 +35,12 @@ function App() {
       animationPercentage: animation});
   }
 
+  const songEndHandler = async () => {
+    let currentIndex = songs.findIndex((song) => song.id === currentSong.id);
+    await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
+    if(isPlaying) audioReference.current.play();
+  };
+
   return (
     <div className="App">
       <Navigation 
@@ -62,7 +68,8 @@ function App() {
         onTimeUpdate={timeUpdateHandler} 
         ref={audioReference} 
         src={currentSong.audio}
-        onLoadedMetadata={timeUpdateHandler}>
+        onLoadedMetadata={timeUpdateHandler}
+        onEnded={songEndHandler}>
       </audio>
     </div>
   );
