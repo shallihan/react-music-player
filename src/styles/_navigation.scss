@@ -4,8 +4,10 @@ nav {
     align-items: center;
     display: flex;
     button {
+        display: flex;
+        flex-direction: row;
         background: transparent;
-        border: none;
+        border-radius: 5px;
         cursor: pointer;
         border: 2px solid rgb(65,65, 65);
         padding: 0.5rem;
@@ -13,6 +15,14 @@ nav {
         &:hover {
             background: rgb(65, 65, 65);
             color: #FFF;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        button {
+            z-index: 10;
         }
     }
 }
