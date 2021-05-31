@@ -4,8 +4,7 @@ import Song from './components/Song';
 import Library from './components/Library';
 import Navigation from './components/Navigation';
 import data from './data';
-
-import "./styles/app.scss";
+import "./styles/App.scss";
 
 function App() {
    // References
